@@ -24,7 +24,7 @@ const Nav = () => {
             </div>
           <a
             role="button"
-            className={`navbar-burger burger ${menuToggle ? "is-active" : ""}`}
+            className={`navbar-burger ${menuToggle ? "is-active" : ""}`}
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarButton"
