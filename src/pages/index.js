@@ -134,7 +134,7 @@ const IndexPage = ({data}) => {
         </Fade>
 
         <div className="grid has-text-centered" style={{ width: "100%" }}>
-          <content className="a content grid-item">
+          <div className="a content grid-item">
             <ul>
               <Fade left cascade>
                 <li>Trustworthy</li>
@@ -146,7 +146,7 @@ const IndexPage = ({data}) => {
                 <li>Helpful</li>
               </Fade>
             </ul>
-          </content>
+          </div>
           <div className="b grid-item">
             <StaticImage
               src="../images/campfire.jpg"
@@ -154,7 +154,7 @@ const IndexPage = ({data}) => {
               alt="Campfire at the fall family campout"
             />
           </div>
-          <content className="c content grid-item">
+          <div className="c content grid-item">
             <ul>
               <Fade left cascade>
                 <li>Friendly</li>
@@ -166,14 +166,14 @@ const IndexPage = ({data}) => {
                 <li>Kind</li>
               </Fade>
             </ul>
-          </content>
+          </div>
           <div className="d grid-item">
             <StaticImage
               src="../images/crafts.jpg"
               alt="Scouts activities include crafts and art"
             />
           </div>
-          <content className="e content grid-item">
+          <div className="e content grid-item">
             <ul>
               <Fade left cascade>
                 <li>Obedient</li>
@@ -185,14 +185,14 @@ const IndexPage = ({data}) => {
                 <li>Thrifty</li>
               </Fade>
             </ul>
-          </content>
+          </div>
           <div className="f grid-item">
             <StaticImage
               src="../images/ship.jpg"
               alt="Fall family campout 2019"
             />
           </div>
-          <content className="g content grid-item">
+          <div className="g content grid-item">
             <ul>
               <Fade left cascade>
                 <li>Brave</li>
@@ -204,7 +204,7 @@ const IndexPage = ({data}) => {
                 <li>Reverent</li>
               </Fade>
             </ul>
-          </content>
+          </div>
           <div className="h grid-item">
             <StaticImage
               src="../images/walking.jpg"

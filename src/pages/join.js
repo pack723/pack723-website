@@ -71,8 +71,8 @@ const Join = () => {
               width="500"
               height="300"
               src="https://www.youtube.com/embed/skSD7y6fgB4?showinfo=0"
-              frameborder="0"
-              allowfullscreen
+              frameBorder="0"
+              allowFullScreen
               title="About Cub Scouting"
             ></iframe>
           </figure>

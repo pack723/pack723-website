@@ -16,11 +16,14 @@ const Nav = () => {
         <div className="navbar-brand">
           <Link to="/">
             <div className="navbar-item">
-              <img src={cubScouts} alt="" />
+              <img src={cubScouts} alt="Cub Scout Logo" />
             </div>
           </Link>
-          <div
-     
+            <div className="navbar-item">
+              <h1>Cub Scout Pack 723</h1>
+            </div>
+          <a
+            role="button"
             className={`navbar-burger burger ${menuToggle ? "is-active" : ""}`}
             aria-label="menu"
             aria-expanded="false"
@@ -30,7 +33,7 @@ const Nav = () => {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </div>
+          </a>
         </div>
   
         <div
@@ -42,7 +45,7 @@ const Nav = () => {
               <a className="navbar-item menu-link">Blog</a>
             </Link> */}
   
-            <div className="navbar-item has-dropdown is-hoverable">
+            {/* <div className="navbar-item has-dropdown is-hoverable">
               <div className="navbar-link">Current</div>
   
               <div className="navbar-dropdown">
@@ -50,16 +53,19 @@ const Nav = () => {
                   <div className="navbar-item">Calendar</div>
                 </Link>
               </div>
-            </div>
+            </div> */}
             <div className="navbar-item has-dropdown is-hoverable">
-              <div className="navbar-link">Prospective</div>
+              <div className="navbar-link">Information</div>
   
               <div className="navbar-dropdown">
+              <Link to="/">
+                  <div className="navbar-item ">Home</div>
+                </Link>
                 <Link to="/about">
-                  <div className="navbar-item">About</div>
+                  <div className="navbar-item ">About Us</div>
                 </Link>
                 <Link to="/ranks">
-                  <div className="navbar-item">Ranks</div>
+                  <div className="navbar-item ">Ranks</div>
                 </Link>
                 <Link to="/faq">
                   <div className="navbar-item">FAQ</div>
