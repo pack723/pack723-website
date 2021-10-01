@@ -1,6 +1,7 @@
 import * as React from "react"
 import Fade from "react-reveal/Fade"
 import Layout from "../components/layout"
+import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = ({data}) => {
 
@@ -53,8 +54,8 @@ const IndexPage = ({data}) => {
             data-sal-easing="ease"
             data-sal-duration="1000"
           >
-            <Img
-              fluid={data.trailer.childImageSharp.fluid}
+            <StaticImage
+              src="../images/trailer.jpg"
               className="intro-image"
               alt="Pack 723 on an activity"
             />
@@ -71,8 +72,8 @@ const IndexPage = ({data}) => {
             data-sal-easing="ease"
             data-sal-duration="500"
           >
-            <Img
-              fluid={data.sub.childImageSharp.fluid}
+            <StaticImage
+              src="../images/sub.jpg"
               className="intro-image"
               alt="Scouts visit the USS Clamagore"
             />
@@ -141,8 +142,8 @@ const IndexPage = ({data}) => {
             </ul>
           </content>
           <div className="b grid-item">
-            <Img
-              fluid={data.campfire.childImageSharp.fluid}
+            <StaticImage
+              src="../images/campfire.jpg"
               alt="Campfire at the fall family campout"
             />
           </div>
@@ -160,8 +161,8 @@ const IndexPage = ({data}) => {
             </ul>
           </content>
           <div className="d grid-item">
-            <Img
-              fluid={data.crafts.childImageSharp.fluid}
+            <StaticImage
+              src="../images/crafts.jpg"
               alt="Scouts activities include crafts and art"
             />
           </div>
@@ -179,8 +180,8 @@ const IndexPage = ({data}) => {
             </ul>
           </content>
           <div className="f grid-item">
-            <Img
-              fluid={data.ship.childImageSharp.fluid}
+            <StaticImage
+              src="../images/ship.jpg"
               alt="Fall family campout 2019"
             />
           </div>
@@ -198,8 +199,8 @@ const IndexPage = ({data}) => {
             </ul>
           </content>
           <div className="h grid-item">
-            <Img
-              fluid={data.walking.childImageSharp.fluid}
+            <StaticImage
+              src="../images/walking.jpg"
               alt="Scouts walking on a camping trip"
             />
           </div>
@@ -213,8 +214,8 @@ const IndexPage = ({data}) => {
 
             <div className="columns">
               <div className="column is-one-third">
-                <Img
-                  fluid={data.pledge.childImageSharp.fluid}
+                <StaticImage
+                  src="../images/pledge.jpg"
                   alt="Scouts on the USS Yorktown"
                 />
               </div>
