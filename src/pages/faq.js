@@ -1,19 +1,46 @@
 import React from "react"
+import { graphql, useStaticQuery } from 'gatsby'
 import Layout from "../components/layout"
-import Nav from "../components/nav"
+import Seo from "../components/seo"
+import BackgroundImage from "gatsby-background-image"
 
-const FAQ = () => (
+const FAQ = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        desktop: file(relativePath: { eq: "walking.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const imageData = data.desktop.childImageSharp.fluid
+
+return (
   <Layout>
-    <Nav />
-    <section className="hero is-primary">
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">Frequently Asked Questions</h1>
-        </div>
-      </div>
-    </section>
+    <Seo title="Frequently Asked Questions" />
+    <BackgroundImage
+      Tag="section"
+      className="hero"
+      fluid={imageData}
+      style={{
+        width: "100%",
+        height: "350px",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        paddingTop: "100px",
+        filter: "grayscale(100%)"
+      }}
+      />
+
     <section className="section">
       <div className="container">
+        <h1 className="title">Frequently Asked Questions</h1>
         <div className="content">
           <p>
             <strong>Where does Pack 723 meet?</strong>
@@ -62,6 +89,6 @@ const FAQ = () => (
       </div>
     </section>
   </Layout>
-)
+)}
 
 export default FAQ

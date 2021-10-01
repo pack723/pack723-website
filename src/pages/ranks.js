@@ -1,20 +1,57 @@
 import React from "react"
+import { graphql, useStaticQuery } from 'gatsby'
+import BackgroundImage from "gatsby-background-image"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby"
+import Seo from "../components/seo"
 
-const Ranks = ({ data }) => (
+const Ranks = ({ data }) => {
+  const photoData = useStaticQuery(
+    graphql`
+      query {
+        desktop: file(relativePath: { eq: "pledge.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const imageData = photoData.desktop.childImageSharp.fluid
+
+
+return (
   <Layout>
-    <section className="hero is-primary">
+    {/* <section className="hero is-primary">
       <div className="hero-body">
         <div className="container">
           <h1 className="title">Cub Scout Rankings</h1>
         </div>
       </div>
-    </section>
+    </section> */}
+
+    <Seo title="Cub Scout Rankings" />
+    <BackgroundImage
+      Tag="section"
+      className="hero"
+      fluid={imageData}
+      style={{
+        width: "100%",
+        height: "350px",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        paddingTop: "100px",
+        filter: "grayscale(100%)"
+      }}
+      />
+
 
     <section className="section">
       <div className="container">
+        <h1 className="title">Cub Scout Rankings</h1>
         <p>
           Scouts who join our pack are assigned to ranks based on age. Meetings
           and Den meetings are planned around activities being worked on for
@@ -92,7 +129,7 @@ const Ranks = ({ data }) => (
       </div>
     </section>
   </Layout>
-)
+) }
 
 
 

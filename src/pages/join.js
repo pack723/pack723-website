@@ -1,21 +1,49 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
+import BackgroundImage from "gatsby-background-image"
+import { graphql, useStaticQuery } from 'gatsby'
 
-const Join = () => (
+const Join = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        desktop: file(relativePath: { eq: "camping-background.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const imageData = data.desktop.childImageSharp.fluid
+  
+
+
+  return (
   <Layout>
-    <SEO title="Joining Pack723" />
-    <div className="join-container">
-      <section className="hero is-primary">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title">Join Us</h1>
-          </div>
-        </div>
-      </section>
+    <Seo title="Joining Pack723" />
+    <BackgroundImage
+      Tag="section"
+      className="hero"
+      fluid={imageData}
+      style={{
+        width: "100%",
+        height: "350px",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        paddingTop: "100px",
+        filter: "grayscale(100%)"
+      }}
+      />
+
 
       <section className="section">
         <div className="container">
+        <h1 className="title">Join Us</h1>
           <p>
             Pack 723 meets on school nights at Bethel AME Church located near
             downtown Greensboro and North Carolina A&T State University. We are
@@ -120,8 +148,8 @@ const Join = () => (
           </p>
         </div>
       </section>
-    </div>
+   
   </Layout>
-)
+)}
 
 export default Join

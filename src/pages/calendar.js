@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Calendar = () => (
   <Layout>
-    <SEO title="Calendar" />
+    <Seo title="Calendar" />
     <section className="hero is-primary">
       <div className="hero-body">
         <div className="container">

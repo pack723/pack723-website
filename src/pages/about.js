@@ -1,19 +1,46 @@
 import React from "react"
+import { graphql, useStaticQuery } from 'gatsby'
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
+import BackgroundImage from "gatsby-background-image"
 
-const About = () => (
+
+const About = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        desktop: file(relativePath: { eq: "camping-background.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const imageData = data.desktop.childImageSharp.fluid
+  
+  return (
   <Layout>
-    <SEO title="About Pack723" />
-    <section className="hero is-primary">
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">About Scouting</h1>
-        </div>
-      </div>
-    </section>
+    <Seo title="About Pack723" />
+    <BackgroundImage
+      Tag="section"
+      className="hero"
+      fluid={imageData}
+      style={{
+        width: "100%",
+        height: "350px",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        paddingTop: "100px",
+        filter: "grayscale(100%)"
+      }}
+      />
     <section className="section">
       <div className="container">
+      <h1 className="title">About Scouting</h1>
         <p>
           Cub Scouting is a family and home-centered program for boys and girls
           in the first through fifth grades. Fourth and fifth grade (10 years
@@ -76,6 +103,7 @@ const About = () => (
       </div>
     </section> */}
   </Layout>
-)
+  )
+}
 
 export default About
