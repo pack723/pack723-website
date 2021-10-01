@@ -1,0 +1,7 @@
+.rank-grid {
+    display: grid;
+    grid-template: repeat(5, auto) / 1fr 1fr 2fr;
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}

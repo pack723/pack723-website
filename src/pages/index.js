@@ -56,6 +56,7 @@ const IndexPage = ({data}) => {
           >
             <StaticImage
               src="../images/trailer.jpg"
+              width={800}
               className="intro-image"
               alt="Pack 723 on an activity"
             />
@@ -74,6 +75,7 @@ const IndexPage = ({data}) => {
           >
             <StaticImage
               src="../images/sub.jpg"
+              width={800}
               className="intro-image"
               alt="Scouts visit the USS Clamagore"
             />
@@ -144,6 +146,7 @@ const IndexPage = ({data}) => {
           <div className="b grid-item">
             <StaticImage
               src="../images/campfire.jpg"
+              width={800}
               alt="Campfire at the fall family campout"
             />
           </div>
