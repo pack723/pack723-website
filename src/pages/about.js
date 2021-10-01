@@ -43,6 +43,20 @@ const About = () => (
 
     <section className="section">
       <div className="container">
+        <h1 className="title">Where Do We Meet?</h1>
+        <p>
+          We normally meet at Bethel AME Church at 200 N Regan Street in Greensboro, North Carolina.  For the time being, much of 
+          our communication is through GroupMe.  For up to date information, feel free to reach out the the Cubmaster Darryl Quick.
+
+        </p>
+        <div className="columns is-centered pt-5">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.8513245881604!2d-79.78295808473045!3d36.07273028010485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885318d9a2218d15%3A0x2c96f190afec2159!2s200%20N%20Regan%20St%2C%20Greensboro%2C%20NC%2027401!5e0!3m2!1sen!2sus!4v1633103286486!5m2!1sen!2sus" title="Map of Bethel AME Church 200 N Regan St, Greensboro, NC 27401" width="400" height="300" allowFullScreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    {/* <section className="section">
+      <div className="container">
         <h1 className="title">How Often Do We Meet?</h1>
         <p>
           Groups of boys of the same age/grade level called Dens generally meet
@@ -60,7 +74,7 @@ const About = () => (
           projects within the community throughout the year.
         </p>
       </div>
-    </section>
+    </section> */}
   </Layout>
 )
 
