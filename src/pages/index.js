@@ -1,12 +1,16 @@
 import * as React from "react"
 import Fade from "react-reveal/Fade"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+import ImageHeader from "../components/imageHeader"
 import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = ({data}) => {
 
   return(
     <Layout>
+      <SEO title="Cub Scout Pack 723" />
+      <ImageHeader className="hero is-medium" />
             <section className="section mission" style={{ padding: "5rem 1.5rem" }}>
         <div className="container">
           <h2
