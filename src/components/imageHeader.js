@@ -28,6 +28,8 @@ const ImageHeader = ({ className }) => (
             backgroundPosition: "center",
             backgroundSize: "cover",
             paddingTop: "100px",
+
+
           }}
         >
           <div className="hero-head"></div>

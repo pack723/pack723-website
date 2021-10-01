@@ -20,7 +20,7 @@ const Nav = () => {
             </div>
           </Link>
           <div
-            role="button"
+     
             className={`navbar-burger burger ${menuToggle ? "is-active" : ""}`}
             aria-label="menu"
             aria-expanded="false"
