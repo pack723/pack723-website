@@ -40,6 +40,18 @@
            content: metaDescription,
          },
          {
+          property: `og:image`,
+          content: "https://pack723.com/images/og/pack723.PNG",
+        },
+        {
+          property: `og:image:url`,
+          content: "https://pack723.com/images/og/pack723.PNG",
+        },
+        {
+          property: `twitter:image`,
+          content: "https://pack723.com/images/og/pack723.PNG",
+        },
+         {
            property: `og:title`,
            content: title,
          },
